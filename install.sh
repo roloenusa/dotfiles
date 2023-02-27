@@ -39,10 +39,6 @@ if ! gh auth status 1>/dev/null 2>/dev/null; then
     gh auth login --git-protocol ssh --hostname github.com --web
   fi
 fi
-
-cd "$(dirname "$0")"
-git submodule init
-git submodule update
 ########################################## End bootstrap
 
 ###
