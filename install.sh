@@ -46,7 +46,7 @@ fi
 ###
 
 # Node via NVM
-[ -d "~/.nvm" ] || mkdir ~/.nvm # Create directory only if it exists
+mkdir -p ~/.nvm # Create directory only if it exists
 brew install nvm
 
 export NVM_DIR="$HOME/.nvm"
