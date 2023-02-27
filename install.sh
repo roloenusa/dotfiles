@@ -60,8 +60,12 @@ brewinstall fzf
 # Applications
 ###
 
-brew list docker        >/dev/null || $brewinstall --cask docker
-brew list firefox       >/dev/null || $brewinstall firefox
+brew list 1password            >/dev/null || $brewinstall --cask 1password
+brew list discord              >/dev/null || $brewinstall --cask discord
+brew list docker               >/dev/null || $brewinstall --cask docker
+brew list firefox              >/dev/null || $brewinstall --cask firefox
+brew list visual-studio-code   >/dev/null || $brewinstall --cask visual-studio-code
+brew list iterm2               >/dev/null || $brewinstall --cask iterm2
 
 
 ###
