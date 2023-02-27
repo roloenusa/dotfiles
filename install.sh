@@ -8,7 +8,11 @@ uname=$(uname -s | tr "[:upper:]" "[:lower:]")
 npm="npm --silent"
 
 # Homebrew
-brew help 1>/dev/null 2>/dev/null || NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+if ! $brew help 1>/dev/null 2>/dev/null; then
+  NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  (echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/roloenusa/.zprofile
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
 brew update --quiet
 brew upgrade --quiet
 brewinstall="brew install --quiet --force"
