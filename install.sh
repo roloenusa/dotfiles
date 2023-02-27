@@ -5,6 +5,9 @@ set -euo pipefail
 debug="" # set to y to enable more output
 uname=$(uname -s | tr "[:upper:]" "[:lower:]")
 
+brew="brew"
+brewinstall="$brew install --quiet --force"
+
 npm="npm --silent"
 
 # Homebrew
@@ -15,7 +18,6 @@ if ! $brew help 1>/dev/null 2>/dev/null; then
 fi
 brew update --quiet
 brew upgrade --quiet
-brewinstall="brew install --quiet --force"
 
 ########################################## Start bootstrap
 # TODO: See if this section can be removed now that we use chezmoi
@@ -33,7 +35,7 @@ if ! gh auth status 1>/dev/null 2>/dev/null; then
 
   # Install Github
   if [[ $answer != "y" ]]; then
-    brewinstall gh
+    $brewinstall gh
     gh auth login --git-protocol ssh --hostname github.com --web
   fi
 fi
@@ -54,11 +56,11 @@ nvm install --lts
 nvm use --lts
 
 # Better finder
-brewinstall fd
+$brewinstall fd
 
 # Fuzzy Search FZF
 # Installation source: https://www.youtube.com/watch?v=1a5NiMhqAR0
-brewinstall fzf
+$brewinstall fzf
 
 ###
 # Applications
