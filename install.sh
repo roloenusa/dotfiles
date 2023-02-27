@@ -23,19 +23,19 @@ sshkey="$HOME/.ssh/id_rsa"
 answer="n"
 
 if ! gh auth status 1>/dev/null 2>/dev/null; then
-	if [[ -f $HOME/.ssh/id_rsa ]]; then
-	  echo "Looks like you've already generated an SSH key."
-	  read -p "Is it in GitHub yet [y/N]? " answer
-	  answer=$(echo "$answer" | tr '[:upper:]' '[:lower:]')
-	else
-	  ssh-keygen -f $sshkey -N ""
-	fi
+  if [[ -f $HOME/.ssh/id_rsa ]]; then
+    echo "Looks like you've already generated an SSH key."
+    read -p "Is it in GitHub yet [y/N]? " answer
+    answer=$(echo "$answer" | tr '[:upper:]' '[:lower:]')
+  else
+    ssh-keygen -f $sshkey -N ""
+  fi
 
-    # Install Github
-	if [[ $answer != "y" ]]; then
-	  brewinstall gh
-	  gh auth login --git-protocol ssh --hostname github.com --web
-	fi
+  # Install Github
+  if [[ $answer != "y" ]]; then
+    brewinstall gh
+    gh auth login --git-protocol ssh --hostname github.com --web
+  fi
 fi
 
 cd "$(dirname "$0")"
