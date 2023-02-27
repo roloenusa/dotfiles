@@ -8,7 +8,7 @@ uname=$(uname -s | tr "[:upper:]" "[:lower:]")
 npm="npm --silent"
 
 # Homebrew
-brew help > /dev/null || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew help 1>/dev/null 2>/dev/null || NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew update --quiet
 brew upgrade --quiet
 brewinstall="brew install --quiet --force"
