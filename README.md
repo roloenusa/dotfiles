@@ -9,6 +9,17 @@ needs.
 
 ## Installation
 
+New mac system don't include the `$HOME/bin` or the `$HOME/.local` setup from previous
+versions. It's better to provision it before running the script:
+
+```sh
+mkdir $HOME/.local
+chmod -R 777 $HOME/.local
+
+mkdir $HOME/bin
+export PATH=$PATH:$HOME/bin
+```
+
 This repository does not need to be cloned and you do not need to set up an SSH
 key first. Just run:
 
@@ -29,12 +40,4 @@ automatically committed and pushed.
 
 ## Caveats
 
-This project aims to be compatible with macOS and Linux; however it gets far
-more real-world testing on macOS, so Linux support may trip over a thing or two.
-
-## History
-
-This started as a series of dotfiles, then a Makefile to link them, then an
-install script to manage installation of common tools and differences between
-operating systems. Today, dotfile management is outsourced to
-[`chezmoi`](https://github.com/twpayne/chezmoi).
+This project aims to be compatible with macOS.
