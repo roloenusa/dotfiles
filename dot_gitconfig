@@ -1,5 +1,8 @@
 # This is Git's per-user configuration file.
 [user]
-# Please adapt and uncomment the following lines:
-	name = roloenusa
-	email = roloenusa@msn.com
+  # Please adapt and uncomment the following lines:
+  name = roloenusa
+  email = roloenusa@msn.com
+  
+[alias]
+  lg = log --graph --pretty=format:'%Cred%h%Creset %C(yellow)%an%d%Creset %s %Cgreen(%cr)%Creset' --date=relative
