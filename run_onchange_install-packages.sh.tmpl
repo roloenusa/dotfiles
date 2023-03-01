@@ -1,4 +1,4 @@
 #!/bin/bash
 
 # install.sh hash: {{ include "install.sh" | sha256sum }}
-install load / < {{ joinPath .chezmoi.sourceDir "install.sh" | quote }}
+{{ joinPath .chezmoi.sourceDir "install.sh" | quote }}
