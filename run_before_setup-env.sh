@@ -57,3 +57,5 @@ if [[ $uname == darwin ]]; then
   # Show full paths in footer of Finder windows
   defaults write com.apple.finder ShowPathbar -bool true
 fi
+
+chmod -R 777 $HOME/.local
