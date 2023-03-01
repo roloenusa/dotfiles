@@ -8,7 +8,6 @@ if [[ ! $uname == darwin ]]; then
   exit 0;
 fi
 
-
 ###
 # System Preferences
 ###
@@ -18,7 +17,6 @@ defaults write com.apple.finder ShowPathbar -bool true
 
 # Turn off natural scrolling
 defaults write -g com.apple.swipescrolldirection -bool NO
-
 
 ###
 # System Provisioning
@@ -39,9 +37,4 @@ fi
 # Check if $HOME/local exists
 if [[ ! -d $HOME/.local ]]; then
   mkdir $HOME/.local
-fi
-
-PERMISSION="$(stat -f '%p' $HOME/.local)"
-if [ ! ${PERMISSION#??} == "777" ]; then
-  chmod -R 777 $HOME/.local
 fi
