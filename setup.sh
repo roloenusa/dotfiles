@@ -42,6 +42,6 @@ if [[ ! -d $HOME/.local ]]; then
 fi
 
 PERMISSION="$(stat -f '%p' $HOME/.local)"
-if [ ! ${PERMISSION#??} == "777" ] && [ ! ${PERMISSION#??} == "755" ]; then
+if [ ! ${PERMISSION#??} == "777" ] then
   chmod -R 777 $HOME/.local/*
 fi
