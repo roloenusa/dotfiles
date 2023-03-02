@@ -6,9 +6,6 @@ echo "==========="
 echo "= Run: Install Packages"
 echo "==========="
 
-debug="" # set to y to enable more output
-uname=$(uname -s | tr "[:upper:]" "[:lower:]")
-
 brewinstall="brew install --quiet --force"
 brew update --quiet
 brew upgrade --quiet
@@ -18,22 +15,28 @@ brew upgrade --quiet
 ###
 
 # Node via NVM
-mkdir -p ~/.nvm # Create directory only if it exists
-brew install nvm
+if ! brew list nvm &>/dev/null; then
+  mkdir -p ~/.nvm # Create directory only if it exists
+  brew install nvm
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh" # This loads nvm
-[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" # this loads nvm bash_completion
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh" # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" # this loads nvm bash_completion
 
-nvm install --lts
-nvm use --lts
+  nvm install --lts
+  nvm use --lts
+fi
+
+###
+# Utilities
+###
 
 # Better finder
-$brewinstall fd
+brew list fd                   >/dev/null || $brewinstall fd
 
 # Fuzzy Search FZF
 # Installation source: https://www.youtube.com/watch?v=1a5NiMhqAR0
-$brewinstall fzf
+brew list fd                   >/dev/null || $brewinstall fzf
 
 ###
 # Applications

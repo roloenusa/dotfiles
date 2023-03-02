@@ -12,6 +12,7 @@ uname=$(uname -s | tr "[:upper:]" "[:lower:]")
 ###
 # Install homebrew
 ###
+
 brew="brew"
 brewinstall="$brew install --quiet --force"
 if ! $brew help 1>/dev/null 2>/dev/null; then
@@ -23,6 +24,7 @@ fi
 ###
 # Install Git and Github
 ###
+
 sshkey="$HOME/.ssh/id_rsa"
 answer="n"
 if ! gh auth status 1>/dev/null 2>/dev/null; then
