@@ -24,8 +24,17 @@ fail if the installation didn't yet set up SSH keys for you.
 
 ### Updates
 
-To make updates to dotfiles, use `chezmoi edit --apply $FILE`. Updates will be
-automatically committed and pushed.
+To make updates to dotfiles, use `chezmoi edit --apply $FILE`.
+
+Updates will be automatically applied, but still need to be committed and pushed.
+
+For example: 
+
+```sh
+chezmoi edit --apply $HOME/.gitconfig
+```
+
+This will update the `dot_gitconfig` and apply the change to the local version as well.
 
 ## Caveats
 
