@@ -10,6 +10,8 @@ debug="" # set to y to enable more output
 uname=$(uname -s | tr "[:upper:]" "[:lower:]")
 
 brewinstall="brew install --quiet --force"
+brew update --quiet
+brew upgrade --quiet
 
 ###
 # Development

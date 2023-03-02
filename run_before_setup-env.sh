@@ -12,12 +12,13 @@ uname=$(uname -s | tr "[:upper:]" "[:lower:]")
 ###
 # Install homebrew
 ###
+brew="brew"
+brewinstall="$brew install --quiet --force"
 if ! $brew help 1>/dev/null 2>/dev/null; then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   (echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/roloenusa/.zprofile
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
-brewinstall="brew install --quiet --force"
 
 ###
 # Install Git and Github
