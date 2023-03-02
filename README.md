@@ -9,22 +9,11 @@ needs.
 
 ## Installation
 
-New mac system don't include the `$HOME/bin` or the `$HOME/.local` setup from previous
-versions. It's better to provision it before running the script:
-
-```sh
-mkdir $HOME/.local
-chmod -R 777 $HOME/.local
-
-mkdir $HOME/bin
-export PATH=$PATH:$HOME/bin
-```
-
 This repository does not need to be cloned and you do not need to set up an SSH
 key first. Just run:
 
 ```sh
-sh -c "$(curl -fsLS chezmoi.io/get)" -- init --apply roloenusa && $(chezmoi source-path)/install.sh
+sh -c "$(curl -fsLS https://raw.githubusercontent.com/roloenusa/dotfiles/main/setup.sh)"
 ```
 
 ### Troubleshooting
