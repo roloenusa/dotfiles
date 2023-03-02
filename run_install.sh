@@ -3,14 +3,13 @@ set -euo pipefail
 # set -x # uncomment to print all commands as they happen
 
 echo "==========="
-echo "= Run On Change: Install Packages"
+echo "= Run: Install Packages"
 echo "==========="
 
 debug="" # set to y to enable more output
 uname=$(uname -s | tr "[:upper:]" "[:lower:]")
 
-brew="brew"
-brewinstall="$brew install --quiet --force"
+brewinstall="brew install --quiet --force"
 
 ###
 # Development
