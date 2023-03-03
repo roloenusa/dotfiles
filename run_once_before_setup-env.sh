@@ -50,11 +50,3 @@ fi
 # Install oh-my-zsh
 rm -rf $HOME/.oh-my-zsh
 git clone --quiet https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
-
-if [[ $uname == darwin ]]; then
-  # Show full paths in footer of Finder windows
-  defaults write com.apple.finder ShowPathbar -bool true
-fi
-
-# Setup projects folder:
-mkdir -p $HOME/projects/personal

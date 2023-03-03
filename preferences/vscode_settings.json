@@ -1,0 +1,12 @@
+{
+  "terminal.integrated.fontFamily": "RobotoMono Nerd Font Mono",
+  "files.trimTrailingWhitespace": true,
+  "files.trimFinalNewlines": true,
+  "editor.tabSize": 2,
+  "workbench.colorCustomizations": {
+    "editorRuler.foreground": "#7a4758",
+    "tab.activeBorder": "#55cac6"
+  },
+  "git.mergeEditor": false,
+  "editor.minimap.enabled": false
+}
