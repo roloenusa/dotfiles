@@ -31,20 +31,20 @@ fi
 # Utilities
 ###
 
-# Better finder
-brew list fd                   >/dev/null || $brewinstall fd
-
-# Fuzzy Search FZF
-# Installation source: https://www.youtube.com/watch?v=1a5NiMhqAR0
-brew list fd                   >/dev/null || $brewinstall fzf
+brew list fd                         >/dev/null || $brewinstall fd      # Better finder
+brew list fd                         >/dev/null || $brewinstall fzf     # Fuzzy Search FZF: https://www.youtube.com/watch?v=1a5NiMhqAR0
+brew list chezmoi                    >/dev/null || $brewinstall chezmoi
+brew list starship                   >/dev/null || $brewinstall starship
+brew list font-hack-nerd-font        >/dev/null || $brewinstall homebrew/cask-fonts/font-hack-nerd-font
+brew list font-roboto-mono-nerd-font >/dev/null || $brewinstall homebrew/cask-fonts/font-roboto-mono-nerd-font
 
 ###
 # Applications
 ###
 
-brew list 1password            >/dev/null || $brewinstall --cask 1password
-brew list discord              >/dev/null || $brewinstall --cask discord
-brew list docker               >/dev/null || $brewinstall --cask docker
-brew list firefox              >/dev/null || $brewinstall --cask firefox
-brew list visual-studio-code   >/dev/null || $brewinstall --cask visual-studio-code
-brew list iterm2               >/dev/null || $brewinstall --cask iterm2
+brew list 1password          >/dev/null || $brewinstall --cask 1password
+brew list discord            >/dev/null || $brewinstall --cask discord
+brew list docker             >/dev/null || $brewinstall --cask docker
+brew list firefox            >/dev/null || $brewinstall --cask firefox
+brew list iterm2             >/dev/null || $brewinstall --cask iterm2
+brew list visual-studio-code >/dev/null || $brewinstall --cask visual-studio-code

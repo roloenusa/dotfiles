@@ -26,7 +26,7 @@ fail if the installation didn't yet set up SSH keys for you.
 
 To make updates to dotfiles, use `chezmoi edit --apply $FILE`.
 
-Updates will be automatically applied, but still need to be committed and pushed.
+Updates will be automatically applied, committed and pushed (see [chezmoi.toml](dot_config/chezmoi/chezmoi.toml)).
 
 For example: 
 

@@ -1,0 +1,12 @@
+{
+  "powershell.codeFormatting.addWhitespaceAroundPipe": true,
+  "files.trimTrailingWhitespace": true,
+  "files.trimFinalNewlines": true,
+  "editor.tabSize": 2,
+  "editor.minimap.enabled": false,
+  "workbench.colorCustomizations": {
+    "editorRuler.foreground": "#7a4758",
+    "tab.activeBorder": "#55cac6"
+  },
+  "git.mergeEditor": false
+}
