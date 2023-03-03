@@ -57,4 +57,4 @@ if [[ $uname == darwin ]]; then
 fi
 
 # Setup projects folder:
-mkdir -p $HOME/repos/personal
+mkdir -p $HOME/projects/personal
