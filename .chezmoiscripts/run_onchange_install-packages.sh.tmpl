@@ -2,7 +2,7 @@
 
 {{ if eq .chezmoi.os "darwin" -}}
 
-# brew_packages.sh: {{ include "brew_packages.sh" | sha256sum }}
-sh {{ joinPath .chezmoi.sourceDir "brew_packages.sh" }}
+# brew_packages.sh: {{ include "scripts/brew_packages.sh" | sha256sum }}
+sh {{ joinPath .chezmoi.sourceDir "scripts/brew_packages.sh" }}
 
 {{ end }}

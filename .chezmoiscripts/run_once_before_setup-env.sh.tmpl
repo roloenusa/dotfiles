@@ -2,7 +2,7 @@
 
 {{ if eq .chezmoi.os "darwin" -}}
 
-sh {{ joinPath .chezmoi.sourceDir "setup-env.sh" }}
-sh {{ joinPath .chezmoi.sourceDir "mac_preferences.sh" }}
+sh {{ joinPath .chezmoi.sourceDir "scripts/setup-env.sh" }}
+sh {{ joinPath .chezmoi.sourceDir "scripts/mac_preferences.sh" }}
 
 {{ end }}
