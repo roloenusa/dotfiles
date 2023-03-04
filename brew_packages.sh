@@ -3,7 +3,7 @@ set -euo pipefail
 # set -x # uncomment to print all commands as they happen
 
 echo "==========="
-echo "= Run: Install Packages"
+echo "= Brew Packages"
 echo "==========="
 
 brewinstall="brew install --quiet --force"
