@@ -3,7 +3,7 @@ set -euo pipefail
 # set -x # uncomment to print all commands as they happen
 
 echo "==========="
-echo "= Run Once Before: Setup Environment"
+echo "= Setup Environment"
 echo "==========="
 
 debug="" # set to y to enable more output
