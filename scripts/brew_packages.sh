@@ -32,11 +32,15 @@ fi
 ###
 
 brew list fd                         >/dev/null || $brewinstall fd      # Better finder
-brew list fd                         >/dev/null || $brewinstall fzf     # Fuzzy Search FZF: https://www.youtube.com/watch?v=1a5NiMhqAR0
+brew list fzf                        >/dev/null || $brewinstall fzf     # Fuzzy Search FZF: https://www.youtube.com/watch?v=1a5NiMhqAR0
 brew list chezmoi                    >/dev/null || $brewinstall chezmoi
-brew list starship                   >/dev/null || $brewinstall starship
 brew list font-hack-nerd-font        >/dev/null || $brewinstall homebrew/cask-fonts/font-hack-nerd-font
 brew list font-roboto-mono-nerd-font >/dev/null || $brewinstall homebrew/cask-fonts/font-roboto-mono-nerd-font
+brew list htop                       >/dev/null || $brewinstall htop
+brew list httpie                     >/dev/null || $brewinstall httpie
+brew list starship                   >/dev/null || $brewinstall starship
+brew list wget                       >/dev/null || $brewinstall wget
+brew list youtube-dl                 >/dev/null || $brewinstall youtube-dl
 
 ###
 # Applications
