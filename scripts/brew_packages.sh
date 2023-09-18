@@ -44,6 +44,13 @@ brew list wget                       >/dev/null || $brewinstall wget
 brew list youtube-dl                 >/dev/null || $brewinstall youtube-dl
 
 ###
+# Languages
+###
+brew list go                         >/dev/null || $brewinstall go
+brew list rustup-init                >/dev/null || $brewinstall rustup-init
+
+
+###
 # Applications
 ###
 
