@@ -115,6 +115,11 @@ export FZF_DEFAULT_OPS="--extended"
 export FZF_DEFAULT_COMMAND="fd --type f"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
+# Use special configurations for warp so starship works properly
+if [[ "$TERM_PROGRAM" == "WarpTerminal" ]]; then
+  export STARSHIP_CONFIG=~/.config/warp-starship.toml
+fi
+
 # Starship Initialization
 eval "$(starship init zsh)"
 
