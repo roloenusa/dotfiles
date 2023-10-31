@@ -1,0 +1,23 @@
+# ~/.config/starship.toml
+
+[line_break]
+disabled = true
+
+[username]
+style_user = "green bold"
+style_root = "red bold"
+format = "[➜ $user]($style) "
+disabled = false
+show_always = true
+
+[git_status]
+stashed = ''
+
+[git_commit]
+only_detached = false
+commit_hash_length = 7
+format = '[](purple bold) [\($hash$tag\)](purple) '
+
+[nodejs]
+style = 'green'
+version_format = 'v${major}'
