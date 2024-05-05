@@ -101,6 +101,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias vi=vim
+alias vim=nvim
+
 # Homebrew
 eval $(/opt/homebrew/bin/brew shellenv)
 
@@ -123,3 +126,5 @@ fi
 # Starship Initialization
 eval "$(starship init zsh)"
 
+# Source Rust and Cargo
+source "$HOME/.cargo/env"
