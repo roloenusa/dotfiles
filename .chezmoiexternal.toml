@@ -1,0 +1,10 @@
+[".config/nvim"]
+    type = "git-repo"
+    url = "https://github.com/roloenusa/nvim.git"
+    refreshPeriod = "168h"
+
+[".tmux/plugins/tpm"]
+    type = "git-repo"
+    url = "https://github.com/tmux-plugins/tpm.git"
+
+
