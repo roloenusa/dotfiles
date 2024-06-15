@@ -39,6 +39,7 @@ brew list font-hack-nerd-font        >/dev/null || $brewinstall homebrew/cask-fo
 brew list font-roboto-mono-nerd-font >/dev/null || $brewinstall homebrew/cask-fonts/font-roboto-mono-nerd-font
 brew list htop                       >/dev/null || $brewinstall htop
 brew list httpie                     >/dev/null || $brewinstall httpie
+brew list ripgrep                    >/dev/null || $brewinstall ripgrep
 brew list starship                   >/dev/null || $brewinstall starship
 brew list wget                       >/dev/null || $brewinstall wget
 brew list youtube-dl                 >/dev/null || $brewinstall youtube-dl
