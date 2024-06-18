@@ -10,6 +10,11 @@ show_always = true
 [git_status]
 stashed = ''
 
+[git_commit]
+only_detached = false
+commit_hash_length = 7
+format = '[](purple bold) [\($hash$tag\)](purple) '
+
 [nodejs]
 style = 'green'
 version_format = 'v${major}'
