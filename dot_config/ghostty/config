@@ -1,0 +1,8 @@
+font-family = "Monaspace Neon"
+font-size = 14
+font-thicken = true
+
+background = 000013
+background-opacity = 0.98
+
+window-save-state = always
