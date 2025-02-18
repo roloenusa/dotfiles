@@ -1,8 +1,33 @@
 font-family = "Monaspace Neon"
 font-size = 14
 font-thicken = true
+bold-is-bright = true
+
+cursor-style = block
 
 background = 000013
 background-opacity = 0.98
+split-divider-color = 82aaff
+unfocused-split-opacity = 0.70
+unfocused-split-fill = 011627
 
 window-save-state = always
+window-inherit-working-directory = true
+
+###
+# Keybinds
+###
+
+keybind = cmd+shift+h=new_split:down
+keybind = cmd+shift+v=new_split:right
+keybind = ctrl+`=resize_split:down,250
+
+keybind = ctrl+shift+h=goto_split:left
+keybind = ctrl+shift+l=goto_split:right
+keybind = ctrl+shift+j=goto_split:down
+keybind = ctrl+shift+k=goto_split:up
+
+# keybind = unconsumed:ctrl+j=goto_split:down
+# keybind = unconsumed:ctrl+k=goto_split:up
+
+keybind = global:cmd+grave_accent=toggle_quick_terminal
